@@ -17,5 +17,26 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Text = "";
+            if(checkBox1.Checked == true)
+            {
+                Text = Text + checkBox1.Text;
+            }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled = false;
+            }
+        }
+
+
     }
 }
